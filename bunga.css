@@ -5,13 +5,14 @@
 }
 
 body {
-    font-family: 'Caveat', 'Brush Script MT', 'Lucida Handwriting', handwriting;
+    font-family: 'Caveat', cursive;
     background: white;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overFlow-y: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     touch-action: manipulation;
@@ -31,6 +32,8 @@ body {
 /*BG*/
 .decoration {
     position: absolute;
+    max-width: 120px;
+    height: auto;
     pointer-events: none;
     z-index: -1;
     opacity: 0.7;
@@ -1152,12 +1155,6 @@ body {
 /* Import Font Handwriting dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
 
-
-/* overlay spotlight 1*/
-body.cake-mode {
-    background: black !important;
-}
-
 /*overlay spotlight*/
 body.cake-mode::after {
     content: '';
@@ -1244,3 +1241,10 @@ body.cake-mode.light-on::after {
     position: absolute;
     top: 0;   /* 🔥 pindah dari bottom ke top */
 }
+
+@media (max-width: 480px) {
+    .decoration {
+        max-width: 80px;
+    }
+}
+
