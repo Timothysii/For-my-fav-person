@@ -37,6 +37,14 @@ body {
     pointer-events: none;
     z-index: 0;
     opacity: 0.7;
+    display: block;
+}
+
+.decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .flower1 {
@@ -55,7 +63,7 @@ body {
     animation: float 4s ease-in-out infinite reverse;
 }
 
-.balloon1 {
+.flower3 {
     width: 150px;
     height: 150px;
     bottom: 20%;
@@ -682,24 +690,6 @@ body {
     pointer-events: all;
 }
 
-.polaroid-left,
-.polaroid-right {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex-shrink: 0;
-}
-
-.polaroid-left {
-    align-self: flex-start;
-    margin-top: 40px;
-}
-
-.polaroid-right {
-    align-self: flex-start;
-    margin-top: 40px;
-}
-
 .notes-inner {
     background: linear-gradient(135deg, #fffacd, #ffeaa7);
     flex: 1;
@@ -769,55 +759,6 @@ body {
     transform: rotate(90deg);
 }
 
-/* Galeri Polaroid */
-.polaroid-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex-shrink: 0;
-    width: 160px;
-}
-
-.polaroid {
-    background: white;
-    padding: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transform: rotate(-2deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUp 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateY(50px) rotate(-2deg);
-}
-
-.polaroid:nth-child(2) {
-    transform: rotate(1deg);
-}
-
-.polaroid:nth-child(3) {
-    transform: rotate(-1deg);
-}
-
-.polaroid:nth-child(4) {
-    transform: rotate(2deg);
-}
-
-.polaroid:nth-child(5) {
-    transform: rotate(-3deg);
-}
-
-.polaroid:hover {
-    transform: rotate(0deg) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.polaroid img {
-    width: 100px;
-    height: 75px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    display: block;
-}
-
 @keyframes slideUp {
     to {
         opacity: 1;
@@ -870,19 +811,14 @@ body {
         font-size: 14px;
     }
 
+    .decoration {
+        width: 100px;
+        height: 100px;
+    }
+
     .notes-container {
         max-width: 1000px;
         gap: 20px;
-    }
-
-    .polaroid-left,
-    .polaroid-right {
-        gap: 12px;
-    }
-
-    .polaroid img {
-        width: 90px;
-        height: 67px;
     }
 }
 
@@ -904,6 +840,16 @@ body {
         height: 70px;
         font-size: 12px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .decoration {
+        width: 80px;
+        height: 80px;
+    }
+
+    .flower3 {
+        width: 80px;
+        height: 100px;
     }
 
     .next-button {
@@ -1028,14 +974,6 @@ body {
         transform: translateX(-50%) translateY(-300px);
     }
 
-    .polaroid-left,
-    .polaroid-right {
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 0;
-        align-self: center;
-    }
-
     .notes-inner {
         width: 100%;
         padding: 30px;
@@ -1151,6 +1089,10 @@ body {
         height: 150px;
     }
 
+    .confetti-container {
+        z-index: 999;
+    }
+
 
 /* Import Font Handwriting dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
@@ -1247,4 +1189,3 @@ body.cake-mode.light-on::after {
         max-width: 80px;
     }
 }
-
