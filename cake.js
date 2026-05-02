@@ -134,4 +134,3 @@ function updateSpotlight() {
     document.documentElement.style.setProperty('--x', x + 'px');
     document.documentElement.style.setProperty('--y', y + 'px');
 }
-
